@@ -1,0 +1,164 @@
+
+.glider {
+    overflow: hidden;
+    position: relative;
+    max-width: 100vw !important;
+}
+
+.glider-list {
+    position: relative;
+}
+
+.glider-ltr .glider-list {
+    left: 0;
+}
+
+.glider-rtl .glider-list {
+    right: 0;
+}
+
+.glider-ltr.ease .glider-list {
+    transition: left 0.5s ease;
+}
+
+.glider-rtl.ease .glider-list {
+    transition: right 0.5s ease;
+}
+
+.glider .glider-item {
+    display: block;
+    box-sizing: border-box;
+}
+
+.glider-rtl .glider-item {
+    float: right;
+}
+
+.glider-ltr .glider-item {
+    float: left;
+}
+
+.glider-control-back, .glider-control-next {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+.glider-controls-ltr .glider-control-back {
+    position: absolute;
+    left: 0;
+}
+
+.glider-controls-ltr .glider-control-next {
+    position: absolute;
+    right: 0;
+}
+
+.glider-controls-rtl .glider-control-back {
+       position: absolute;
+    right: 0;
+}
+
+.glider-controls-rtl .glider-control-next {
+    position: absolute;
+    left: 0;
+}
+
+.glider-top {
+    top: 0;
+}
+
+.glider-middle {
+    top: 40%;
+}
+
+.glider-bottom {
+    bottom: 0;
+}
+
+.glider-control-link {
+    padding: 0;
+    margin: 0 auto;
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.glider-control-link li {
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0;
+    margin: 0.3em;
+    color: #FFF;
+}
+
+.glider-circle-icon {
+    display: inline-block;
+    background-color: #FFF;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    transition: background 0.5s ease;
+}
+
+.glider-link.selected .glider-circle-icon {
+    background-color: #1F3;
+}
+
+.slide {
+    width: 100%;
+}
+
+
+.slide > ul {
+    padding: 0;
+    margin: 0;
+ 
+}
+
+.slide > ul > li {
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Recommended style...
+    only show first item in glider targets unless JavaScript runs 
+*/
+.slide > ul > li {
+   /* display: none;*/
+    text-align:center;
+}
+
+.slide > ul > li > div {
+    /* Removal speed */
+    transition: opacity 0.2s ease;
+    display: inline-block;
+    padding: 1em;
+   
+    color: #FFF;
+    font-size: 1.5em;
+    opacity: 1;
+}
+
+.controls {
+    text-align: center;
+    position: relative;
+    top: -70px;
+}
+
+.controls ul {
+    display: inline-block;
+    padding: 0;
+}
+
+.controls .glider-control-back, .controls .glider-control-next, .controls li {
+    display: inline-block;
+    padding: 0.3em;
+    marging: 1em;
+    font-size: 2em;
+    cursor: pointer;
+}
